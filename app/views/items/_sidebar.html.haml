@@ -1,0 +1,53 @@
+.side-wrapper
+  %nav.side-search
+    %ul.sider-search__categories
+      %li.sider-search__wrapper
+        %h2
+          = link_to root_path do
+            = icon('fas', 'list-ul lg',
+            alt: 'list-icon', style: 'color:#ea352d')
+            %span.sider-search__categories-text 一覧から探す
+        .categories-wrapper
+          %ul.first-category__wrapper
+            -# - @main_categories.each do |main_category|
+              %li.first-category{data: {category: {id: main_category.id, sub: main_category.sub, sub_sub: main_category.sub_sub}}}
+                %div
+                  = main_category.name
+          %ul.second-category__wrapper
+            -# - @sub_categories.each do |sub_category|
+              %li.second-category{data: {category: {id: sub_category.id, sub: sub_category.sub, sub_sub: sub_category.sub_sub}}}
+                %div
+                  = sub_category.name
+          %ul.third-category__wrapper
+            -# - @sub_sub_categories.each do |sub_sub_category|
+              %li.third-category{data: {category: {id: sub_sub_category.id, sub: sub_sub_category.sub, sub_sub: sub_sub_category.sub_sub}}}
+                = sub_sub_category.name
+      %li.sider-search__products
+        %h2
+          = link_to root_path do
+            = icon('fas', 'tag lg', alt: 'tag-icon',
+            style: 'color:#ea352d', class: 'toppage-header-top__footer-search-brand--icon')
+            %span 品目から探す
+        %ul.product__wrapper
+          %li.product
+            %p 野菜セット
+          %li.product
+            %p 野菜
+          %li.product
+            %p 果物
+          %li.product
+            %p 肉
+          %li.product
+            %p 魚介類
+          %li.product
+            %p 卵・乳製品
+          %li.product
+            %p はちみつ
+          %li.product
+            %p お酒
+          %li.product
+            %p お茶
+          %li.product
+            %p 米・穀類
+          %li.product
+            %p 加工品

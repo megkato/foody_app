@@ -1,0 +1,74 @@
+
+%section.account.login.have_ttl.js-hide-content
+  .container
+    %h2.h2_ttl
+      %span.main_txt メールアドレスで登録
+    %form#new_user.form_account{"accept-charset" => "UTF-8", :action => "/user", :method => "post"}
+      %input{:name => "authenticity_token", :type => "hidden", :value => "G3rTV92F6zOQxj0fe7AXIMkfGal24EE+YicgblA37rrrUx8q4o9uPwc9s+0RSHwCcj13OmgVRVixMpA4C+eHHQ=="}/
+      %p.desc_text
+        ニックネーム
+        %span.txt_must 必須
+        %br/
+        %span.sub_attention ＊サイト上で公開されます。
+      %input#user_name{:name => "user[name]", :placeholder => "野菜 はな子", :type => "text"}/
+      %p.desc_text
+        メールアドレス
+        %span.txt_must 必須
+        %br/
+        %span.sub_attention ＊普段お使いになっているメールアドレスをご記入ください。
+      %input#user_email{:name => "user[email]", :placeholder => "tabechoku@example.com", :type => "text"}/
+      %p.desc_text
+        パスワード
+        %span.txt_must 必須
+      %input#user_password_authentication_attributes_password{:name => "user[password_authentication_attributes][password]", :type => "password"}/
+      %p.desc_text
+        パスワード（確認）
+        %span.txt_must 必須
+      %input#user_password_authentication_attributes_password_confirmation{:name => "user[password_authentication_attributes][password_confirmation]", :type => "password"}/
+      %script{:src => "https://www.recaptcha.net/recaptcha/api.js?render=6LcfeMIUAAAAAObaPHlIernyVJE0HW3beX1Hy3Bh"}
+
+      :javascript
+        // Define function so that we can call it again later if we need to reset it
+        // This executes reCAPTCHA and then calls our callback.
+        function executeRecaptchaForSignup() {
+          grecaptcha.ready(function() {
+            grecaptcha.execute('6LcfeMIUAAAAAObaPHlIernyVJE0HW3beX1Hy3Bh', {action: 'signup'}).then(function(token) {
+              //console.log('g-recaptcha-response-signup', token)
+              setInputWithRecaptchaResponseTokenForSignup('g-recaptcha-response-signup', token)
+            });
+          });
+        };
+        // Invoke immediately
+        executeRecaptchaForSignup()
+
+        // Async variant so you can await this function from another async function (no need for
+        // an explicit callback function then!)
+        // Returns a Promise that resolves with the response token.
+        async function executeRecaptchaForSignupAsync() {
+          return new Promise((resolve, reject) => {
+            grecaptcha.ready(async function() {
+              resolve(await grecaptcha.execute('6LcfeMIUAAAAAObaPHlIernyVJE0HW3beX1Hy3Bh', {action: 'signup'}))
+            });
+          })
+        };
+
+                  var setInputWithRecaptchaResponseTokenForSignup = function(id, token) {
+          var element = document.getElementById(id);
+          element.value = token;
+        }
+
+
+      %input#g-recaptcha-response-signup.g-recaptcha.g-recaptcha-response{"data-sitekey" => "6LcfeMIUAAAAAObaPHlIernyVJE0HW3beX1Hy3Bh", :name => "g-recaptcha-response[signup]", :type => "hidden"}/
+      %p.attention
+        食べチョクの
+        %a{:href => "/terms", :target => "_blank"}> 利用規約
+        、
+        %br.sp/
+        = succeed "\u{306b}\u{540c}\u{610f}\u{306e}\u{4e0a}\u{3001}" do
+          %a{:href => "/privacy", :target => "_blank"} プライバシーポリシー
+      .btn_layout_01
+        %button{:name => "button", :type => "submit"}
+          %span.main_txt 登録する
+  / container
+/ account
+
