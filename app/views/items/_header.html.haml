@@ -2,6 +2,7 @@
   .top-header-top
     .top-header-top__header
       .top-header-top__header-contents
+        %h1 Foodie
         = link_to root_path do
           -# = image_tag 'mercari-logo-red.svg', alt: 'mercari-logo',
           -# class: 'toppage-header-top__header-contents--mercari-logo'
@@ -19,22 +20,22 @@
               %ul.top-header-top__footer-login-contents
                 %li.top-header-top__footer-login-content
                   = link_to root_path do
-                    = icon('far', 'heart ', alt: 'heart-icon',
-                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    = icon('fas', 'heart ', alt: 'heart-icon',
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-heaet-icon')
                     %span お気に入り
                 %li.top-header-top__footer-login-content--shoppingbasket
                   = link_to root_path do
-                    = icon('far', 'bell', alt: 'bell-icon',
-                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    = icon('fas', 'shopping-cart', alt: 'shopping-cart-icon',
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-cart-icon')
                     %span カゴ
                 %li.top-header-top__footer-login-content--history
                   = link_to root_path do
-                    = icon('fas', 'check', alt: 'bell-icon',
-                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    = icon('fas', 'history', alt: 'history-icon',
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-history-icon')
                     %span 履歴
                 %li.top-header-top__footer-login-content--mypage
                   = link_to root_path do
-                    = icon('fas', 'check', alt: 'bell-icon', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    = icon('fas', 'user', alt: 'mypage-icon', class: 'top-header-top__footer-login-maypage-icon')
                     %span
                     = link_to "マイページ", '/users/edit'
         - else
