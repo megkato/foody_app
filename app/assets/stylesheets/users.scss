@@ -1,3 +1,136 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.userContainer {
+  background-color: $lightGray;
+  color: $lightBlack;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  &__userHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    .userHeader{
+      @include pageHeader();
+      &__progressBar {
+        height: 30px;
+        width: 290px;
+        color: $darkGray;
+        margin-left: 120px;
+        .progressBar {
+          margin-right: 28px;
+          position: relative;
+          display: inline-block;
+          min-width: 60px;
+          font-size: 12px;
+          text-align: center;
+          &__status {
+            position: absolute;
+            left: 40%;
+            width: 12px;
+            height: 12px;
+            margin: 8px auto 0;
+            background: $paleGray;
+            border-radius: 50%;
+            z-index: 2;
+          }
+          &__bar {
+            position: absolute;
+            left: 50%;
+            top: 31px;
+            width: 93px;
+            height: 2px;
+            background: $paleGray;
+          }
+        }
+        #p_active {
+          color: $lightBlue;
+        }
+        #status_active {
+          background: $lightBlue;
+        }
+      }
+    }
+  }
+  &__userMain {
+    @include pageMain();
+    &__title {
+      @include pageTitle();
+    }
+    .userMain{
+      padding: 0 180px;
+      &__formGroup {
+        width: 350px;
+        font-size: 14px;
+        margin: 10px 0 24px 0;
+        &__double {
+          display: flex;
+        }
+        &__triple {
+          display: flex;
+        }
+        &__label {
+          font-weight: bold;
+        }
+        &__require {
+          @include requireLbl();
+        }
+        &--input {
+          width: 100%;
+          height: 48px;
+          margin-top: 3px;
+          padding: 10px 16px 8px;
+          border: 1px solid $paleGray;
+          border-radius: 5px;
+          font-size: 18px;
+          font-weight: 100;
+          &.double {
+            width: 50%;
+            margin-right: 10px;
+          }
+          &.triple {
+            width: 30%;
+            margin-right: 5px;
+          }
+          &.select {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          &:focus{
+            outline: none;
+            border: 1px solid $lightBlue;
+          }
+          &::placeholder {
+            color: $darkGray;
+            font-size: 15px;
+          }
+        }
+        &__errorMsg {
+          color: $Scarlet;
+          &.double {
+            margin-right: 60px;
+          }
+        }
+      }
+      &__actions {
+        @include longBtn();
+      }
+      .signInMsg {
+        display: inline-block;
+        margin-top: 4px;
+        &:hover {
+          color: $lightBlue;
+        }
+        &--label:hover {
+          cursor: pointer;
+          color: $lightBlue;
+        }
+      }
+    }
+  }
+  &__userFooter {
+    .userFooter {
+      @include pageFooter();
+    }
+  }
+}
