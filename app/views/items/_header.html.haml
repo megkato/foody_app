@@ -20,80 +20,23 @@
                 %li.top-header-top__footer-login-content
                   = link_to root_path do
                     = icon('far', 'heart ', alt: 'heart-icon',
-                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--heart-icon')
-                    %span いいね！一覧
-                %li.top-header-top__footer-login-content--notice
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    %span お気に入り
+                %li.top-header-top__footer-login-content--shoppingbasket
                   = link_to root_path do
                     = icon('far', 'bell', alt: 'bell-icon',
-                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--bell-icon')
-                    %span お知らせ
-                    .top-header-top__footer-login-content--notice-count
-                      99+
-                  %ul.top-header-top__footer-login-content--notice-lists
-                    %li.top-header-top__footer-login-content--todo
-                      = link_to root_path do
-                        = icon('fas', 'check', alt: 'bell-icon',
-                        style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
-                        %span やることリスト
-                      %ul.top-header-top__footer-login-content--todo-list
-                        %li
-                        現在、やることリストはありません
-
-                      %li.top-header-top__footer-login-content--mypage
-                        = link_to root_path do
-                          %figure
-                            %div
-                              = image_tag 'member_photo_noimage.png', alt: 'mypage-logo', width: '32px',
-                              class: 'top-header-top__footer-login-content--mypage-header-user-icon'
-                              %span
-                              = link_to "マイページ", '/users/edit'
-                          .top-header-top__footer-login-content--mypage-box
-                            .top-header-top__footer-login-content--mypage-box-content
-                              %figure
-                                %div
-                                  = image_tag 'member_photo_noimage.png', alt: 'mypage-logo', width: '60px',
-                                  class: 'toppage-header-top__footer-login-content--mypage-pulldown-user-icon'
-                                %figcaption
-                                  = current_user.name
-                              %ul.top-header-top__footer-login-content--mypage-review-listing
-                                %li
-                                  = link_to '評価: 2', '#'
-                                %li
-                                  -# = link_to "出品数: #{current_user.products.length}", listing_listing_mypage_index_path
-                              %ul.top-header-top__footer-login-content--mypage-sales-point
-                                %li
-                                  = link_to '#' do
-                                    .mypage-list-left 売上金
-                                    .mypage-list-right
-                                      ¥0
-                                      = icon 'fas', 'chevron-right'
-                                %li
-                                  = link_to '#' do
-                                    .l-left ポイント
-                                    .l-right
-                                      P0
-                                      = icon 'fas', 'chevron-right'
-                            %ul.top-header-top__footer-login-content--mypage-nav-list
-                              %li
-                                -# = link_to listing_listing_mypage_index_path, class: 'top-header-top__footer-login-content--mypage-nav-list-item' do
-                                  出品した商品 - 出品中
-                                  -# = icon 'fas', 'chevron-right'
-                              %li
-                                -# = link_to listing_in_progress_mypage_index_path, class: 'top-header-top__footer-login-content--mypage-nav-list-item' do
-                                -#   出品した商品 - 取引中
-                                -#   = icon('fas', 'chevron-right')
-                              %li
-                                -# = link_to listing_completed_mypage_index_path, class: 'top-header-top__footer-login-content--mypage-nav-list-item' do
-                                -#   出品した商品 - 売却済み
-                                -#   = icon('fas', 'chevron-right')
-                              %li
-                                -# = link_to '#', class: 'top-header-top__footer-login-content--mypage-nav-list-item' do
-                                -#   購入した商品 - 取引中
-                                -#   = icon('fas', 'chevron-right')
-                              %li
-                                -# = link_to '#', class: 'top-header-top__footer-login-content--mypage-nav-list-item' do
-                                -#   購入した商品 - 過去の取引
-                                -#   = icon('fas', 'chevron-right')
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    %span カゴ
+                %li.top-header-top__footer-login-content--history
+                  = link_to root_path do
+                    = icon('fas', 'check', alt: 'bell-icon',
+                    style: 'color:#cccccc', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    %span 履歴
+                %li.top-header-top__footer-login-content--mypage
+                  = link_to root_path do
+                    = icon('fas', 'check', alt: 'bell-icon', class: 'top-header-top__footer-login-content--ckeck-icon')
+                    %span
+                    = link_to "マイページ", '/users/edit'
         - else
           .top-header-top__footer-contents-wrapper
             .top-header-top__footer-contents--new-register-btn
