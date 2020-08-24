@@ -22,7 +22,7 @@
     .userMain
       = form_for(@user, url: user_registration_path) do |f|
         .userMain__formGroup
-          = f.label :nickname, class: 'userMain__formGroup__label'
+          = f.label :ニックネーム, class: 'userMain__formGroup__label'
           %span.userMain__formGroup__require
             必須
           %br/
@@ -54,7 +54,7 @@
           %p.userMain__formGroup__errorMsg
             =@user.errors.messages[:password_confirmation][0]
         .userMain__formGroup
-          = f.label :family_name, class: 'userMain__formGroup__label'
+          = f.label :名前, class: 'userMain__formGroup__label'
           %span.userMain__formGroup__require
             必須
           %br/
@@ -66,7 +66,7 @@
           %p.userMain__formGroup__errorMsg
             =@user.errors.messages[:first_name][0]
         .userMain__formGroup
-          = f.label :family_name_kana, class: 'userMain__formGroup__label'
+          = f.label :フリガナ, class: 'userMain__formGroup__label'
           %span.userMain__formGroup__require
             必須
           %br/
@@ -78,12 +78,21 @@
           %p.userMain__formGroup__errorMsg
             =@user.errors.messages[:first_name_kana][0]
         .userMain__formGroup
-          = f.label :birthday, class: 'userMain__formGroup__label'
+          = f.label :誕生日, class: 'userMain__formGroup__label'
           %span.userMain__formGroup__require
             必須
           %br/
           .userMain__formGroup__triple
           = f.date_select :birthday, {use_month_numbers: true, start_year: 1930, end_year: (Time.now.year - 10), prompt:"--"}, {class: 'userMain__formGroup--input triple select'}
+          %p.userMain__formGroup__errorMsg
+            =@user.errors.messages[:birthday][0]
+        .userMain__formGroup
+          = f.label :ユーザータイプ, class: 'userMain__formGroup__label'
+          %span.userMain__formGroup__require
+            必須
+          %br/
+          .userMain__formGroup__triple
+          = f.collection_select :user_type, UserType.all, :id, :value, { prompt: "選択してください" },{class: 'userMain__formGroup--input triple select'}
           %p.userMain__formGroup__errorMsg
             =@user.errors.messages[:birthday][0]
         .userMain__actions
