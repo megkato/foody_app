@@ -1,7 +1,14 @@
-@import "config/reset";
-@import "config/color";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "sell/main";
+
+@import "config/reset";
+@import "config/base";
+@import "config/color";
+
 @import "modules/signup";
 @import "modules/flash";
+
+@import "sell/header";
+@import "sell/sidebar";
+@import "sell/main";
+@import "sell/footer";
