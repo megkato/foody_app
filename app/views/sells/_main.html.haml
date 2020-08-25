@@ -1,0 +1,133 @@
+.main
+  .main-kv__img
+    %ul.top-slider__wrapper
+      %li.top-slider__contents-first
+        .top-slider__contents-first-content
+          = link_to '' do
+            = image_tag '#', 
+            height: '390px', class: 'toppage-slider__contents-first--camp-photo'
+      %li.top-slider__contents-second
+        .top-slider__contents-second-content
+          = image_tag '#',
+          class: 'toppage-slider__contents-second-content--device-photo', size: '440x390'
+  .main__features
+    %h2.head
+      新商品
+  .top-main
+    .top-main__ranking-top
+      人気の商品
+      %ul.top-main__list
+        %li.top-main__menu
+          .top-main__contents
+            - @items.each do |item|
+              .top-main__content
+                = link_to sell_path(item.id), method: :get do
+                  .toppage-main__image
+                    %span
+                      = item.jpy
+                    = image_tag product.images[0], size: '188x252'
+                    -if item.status_id == 4
+                      .pickup-content__red
+                      .pickup-content__sold
+                        SOLD
+                    -if item.status_id == 3
+                      .pickup-content__gray
+                      .pickup-content__stop
+                        公開停止
+    .top-main__ranking-bottom
+      .top-main__ranking-name
+        .top-main__text
+          ワケあり野菜
+          .top-main__item-more
+            = link_to 'もっと見る >', '#', class: 'top-main__more-link'
+        .top-main__item
+          .top-main__contents
+            - @items.each do |item|
+              .top-main__content
+                = link_to sell_path(item.id), method: :get do
+                  .toppage-main__image
+                    %span
+                      = item.jpy
+                    = image_tag product.images[0], size: '188x252'
+                    -if item.status_id == 4
+                      .pickup-content__red
+                      .pickup-content__sold
+                        SOLD
+                    -if item.status_id == 3
+                      .pickup-content__gray
+                      .pickup-content__stop
+                        公開停止
+                  .top-main__item-name
+                    %span= item.name
+      .top-main__ranking-name
+        .top-main__text
+          最安値商品
+          .top-main__item-more
+            = link_to 'もっと見る >', '#', class: 'top-main__more-link'
+        .top-main__item
+          .top-main__contents
+            - @items.each do |item|
+              .top-main__content
+                = link_to sell_path(item.id), method: :get do
+                  .top-main__image
+                    %span
+                      = item.jpy
+                    = image_tag item.images[0], resize: '188x188'
+                    -if item.status_id == 4
+                      .pickup-content__red
+                      .pickup-content__sold
+                        SOLD
+                    -if item.status_id == 3
+                      .pickup-content__gray
+                      .pickup-content__stop
+                        公開停止
+                  .top-main__item-name
+                    %span= item.name
+      .top-main__ranking-name
+        .top-main__text
+          小さめ野菜セット
+          .top-main__item-more
+            = link_to 'もっと見る >', '#', class: 'toppage-main__more-link'
+        .top-main__item
+          .top-main__contents
+            - @items.each do |item|
+              .top-main__content
+                = link_to sell_path(item.id), method: :get do
+                  .top-main__image
+                    %span
+                      = item.jpy
+                    = image_tag product.images[0], resize: '188x188'
+                    -if item.status_id == 4
+                      .pickup-content__red
+                      .pickup-content__sold
+                        SOLD
+                    -if item.status_id == 3
+                      .pickup-content__gray
+                      .pickup-content__stop
+                        公開停止
+                  .top-main__item-name
+                    %span= item.name
+      .top-main__ranking-name
+        .top-main__text
+          大きめ野菜セット
+          .top-main__item-more
+            = link_to 'もっと見る >', '#', class: 'top-main__more-link'
+        .top-main__item
+          .top-main__contents
+            - @items.each do |item|
+              .top-main__content
+                = link_to sell_path(item.id), method: :get do
+                  .top-main__image
+                    %span
+                      = item.jpy
+                    = image_tag item.images[0], resize: '188x188'
+                    -if item.status_id == 4
+                      .pickup-content__red
+                      .pickup-content__sold
+                        SOLD
+                    -if item.status_id == 3
+                      .pickup-content__gray
+                      .pickup-content__stop
+                        公開停止
+                  .toppage-main__item-name
+                    %span= item.name
