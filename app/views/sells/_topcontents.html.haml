@@ -1,0 +1,24 @@
+.top-contents__imag
+  / チェックボックス
+  %input{:id => "pic1", :name => "picture", :type => "radio", :value => "", :checked => "checked"}/
+  %input{:id => "pic2", :name => "picture", :type => "radio", :value => ""}/
+  %input{:id => "pic3", :name => "picture", :type => "radio", :value => ""}/
+  %input{:id => "pic4", :name => "picture", :type => "radio", :value => ""}/
+  .bg-pic
+    .inside
+      .pic.pic_1
+      .pic.pic_2
+      .pic.pic_3
+      .pic.pic_4
+  / スライダーのコントロールボタンを指定
+  .slide-controls
+    %label{:for => "pic1"}
+    %label{:for => "pic2"}
+    %label{:for => "pic3"}
+    %label{:for => "pic4"}
+  / スライダーのナビゲーションボタン
+  .slide-buttons
+    %label{:for => "pic1"}
+    %label{:for => "pic2"}
+    %label{:for => "pic3"}
+    %label{:for => "pic4"}

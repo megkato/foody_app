@@ -1,0 +1,132 @@
+.top-contents__imag {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 100%;
+  text-align: center;
+}
+.top-contents__imag input[type=radio] {
+  display: none;
+}
+.top-contents__imag label {
+  cursor:pointer;
+  text-decoration: none;
+  padding: 5px;
+}
+.bg-pic {
+  background: #fff;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  /* ボックスのはみ打た部分を隠す */
+}
+/* スライダー画像の位置を比率で指定 */
+.pic1:checked ~ #bg-pic .inside {
+  margin-left: 0;
+}
+.pic2:checked ~ #bg-pic .inside {
+  margin-left: -100%;
+}
+.pic3:checked ~ #bg-pic .inside {
+  margin-left: -200%;
+}
+.pic4:checked ~ #bg-pic .inside {
+  margin-left: -300%;
+}
+.bg-pic .inside {
+  transition-duration:.8s;
+  /* アニメーションの開始から終了までの時間を指定 */
+  width: 400%;
+  line-height: 0;
+  height: 400px;
+}
+.bg-pic .pic {
+  width: 25%;
+  float:left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 上３行でボックスをど真ん中に指定 */
+  height: 100%;
+  background-size: cover;
+}
+/* 画像urlを指定 */
+.bg-pic .pic_1 {
+  background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60,659×300");
+}
+.bg-pic .pic_2 {
+  background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+}
+.bg-pic .pic_3 {
+  background-image: url("https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+}
+.bg-pic .pic_4 {
+  background-image: url("https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+}
+/* スライダーのコントロールボタンを指定 */
+.slide-controls {
+  margin: -180px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+.slide-controls label {
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+  /* 透明度を指定 */
+  transition:opacity .2s ease-out;
+  /* アニメーションの開始から終了までの時間を指定 */
+}
+.slide-controls label:hover {
+  opacity: 1;
+  /* 透明度を指定 */
+}
+.pic1:checked ~ #slide-controls label:nth-child(2),
+.pic2:checked ~ #slide-controls label:nth-child(3),
+.pic3:checked ~ #slide-controls label:nth-child(4),
+.pic4:checked ~ #slide-controls label:nth-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+  float:right;
+  margin: 0 -80px 0 0;
+  display: block;
+}
+.pic1:checked ~ #slide-controls label:nth-last-child(2),
+.pic2:checked ~ #slide-controls label:nth-last-child(3),
+.pic3:checked ~ #slide-controls label:nth-last-child(4),
+.pic4:checked ~ #slide-controls label:nth-last-child(1) {
+  background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+  float:left;
+  margin: 0 0 0 -80px;
+  display: block;
+}
+/* スライダーの送りボタンを指定 */
+.slide-buttons {
+  margin: 150px 0 0;
+  text-align: center;
+}
+.slide-buttons label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius:0%;
+  background: gainsboro;
+  margin: 0 10px;
+  transform: scale(1,1);
+  /* XY軸(横縦)の伸縮率を指定 */
+  transition-duration:.5s;
+  /* アニメーションの開始から終了までの時間を指定 */
+}
+.slide-buttons label:hover {
+ transform: scale(1.5,1.5);
+ /* XY軸(横縦)の伸縮率を指定 */
+}
+/* ナビゲーションボタンをcheckした時の背景色を指定 */
+.pic1:checked ~ #slide-buttons label:nth-child(1),
+.pic2:checked ~ #slide-buttons label:nth-child(2),
+.pic3:checked ~ #slide-buttons label:nth-child(3),
+.pic4:checked ~ #slide-buttons label:nth-child(4) {
+  background: #444;
+}
