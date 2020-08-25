@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday, :user_type])
   end
 
   private
@@ -20,5 +20,5 @@ class ApplicationController < ActionController::Base
       username == Rails.application.credentials.basic[:user_name] && password == Rails.application.credentials.basic[:password]
     end
   end
-  
+
 end
