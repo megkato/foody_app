@@ -6,14 +6,13 @@
   
   .side-wrapper {
     width: 250px;
-    height: 100vh;
     font-weight: bold;
+    background-color:#F5F5F5;
+    margin-bottom: 20px;
     .sider-search__wrapper {
       padding: 8px;
       height: 120px;
-      background-color:#F5F5F5;
       border-radius: 5px;
-      margin-bottom: 15px;
       font-size: 18px;
       .side-search__categories-list {
         margin-bottom: 8px;
@@ -21,8 +20,6 @@
     }
     .sider-search__products {
       padding: 8px;
-      height: 100vh;
-      background-color:#F5F5F5;
       border-radius: 5px;
       margin-bottom: 10px;
       font-size: 18px;
@@ -43,7 +40,7 @@
     .main__features {
       height: 300px;
       width: 100%;
-      background-color: #fffffe;
+      background-color: #FFFFE0;
       margin-bottom: 10px;
       h2 {
         font-weight: bold;
@@ -60,13 +57,18 @@
       .top-main__ranking-top {
         width: 100%;
         height: 300px;
-        background-color: #fffffe;
+        background-color: #FFFFE0;
         margin-bottom: 10px;
+      }
+      .top-main__category-name {
+        width: 100%;
+        height: 500px;
+        background-color: #FFFFE0;
       }
       .top-main__text {
         width: 100%;
         height: 200px;
-        background-color: #fffffe;
+        background-color: #FFFFE0;
         margin-bottom: 10px;
       }
     }

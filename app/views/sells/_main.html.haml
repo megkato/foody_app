@@ -7,19 +7,19 @@
             %span
               = link_to root_path do
                 = icon('fas', 'list-ul lg',
-                alt: 'list-icon', style: 'color:#fffffe')
+                alt: 'list-icon', style: 'color:#000000')
                 %span.sider-search__categories-text 一覧から探す
           .side-search__categories-list
             %span
               = link_to root_path do
                 = icon('fas', 'list-ul lg',
-              alt: 'list-icon', style: 'color:#fffffe')
+              alt: 'list-icon', style: 'color:#000000')
                 %span.sider-search__categories-text 生産者から探す
           .side-search__categories-list
             %span
               = link_to root_path do
                 = icon('fas', 'list-ul lg',
-              alt: 'list-icon', style: 'color:#fffffe')
+              alt: 'list-icon', style: 'color:#000000')
                 %span.sider-search__categories-text 飲食店から探す
 
           .categories-wrapper           
@@ -41,7 +41,7 @@
           %span
             = link_to root_path do
               = icon('fas', 'tag lg', alt: 'tag-icon',
-              style: 'color:#fffffe', class: 'toppage-header-top__footer-search-brand--icon')
+              style: 'color:#000000', class: 'toppage-header-top__footer-search-brand--icon')
               %span 品目から探す
           %ul.product__wrapper
             %li.product
@@ -141,6 +141,6 @@
                           公開停止
                     .top-main__item-name
                       %span= item.name
-        .top-main__ranking-name
-          .top-main__text
-            カテゴリー
+      .top-main__category-name
+        .top-main__text
+          カテゴリー

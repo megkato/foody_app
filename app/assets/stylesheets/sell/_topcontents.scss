@@ -11,3 +11,15 @@
   object-fit: cover;
   height: 500px;
  }
+
+ .keyword__contents-list {
+   margin: 20px;
+   height: 20px;
+   width: 100%;
+   display: flex;
+   font-size: 13px;
+   li {
+     margin-left: 10px;
+     font-weight: bold;
+   }
+ }
