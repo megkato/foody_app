@@ -1,6 +1,7 @@
 .top-header-top__header-contents {
   height: 80px;
   display: flex;
+  justify-content: space-between;
   margin: 0 20px 0 20px;
   line-height: 80px;
 }
@@ -12,7 +13,6 @@ h1 {
 
 .top-header-top__header-search {
   display: flex;
-  margin-left: 630px;
   input.toppage-header-top__header-search--search-form {
     width: 500px;
     height: 50%;

@@ -84,11 +84,11 @@
                       %span
                         = item.jpy
                       = image_tag product.images[0], size: '188x252'
-                      -if item.status_id == 4
+                      -if item.trading_status_id == 4
                         .pickup-content__red
                         .pickup-content__sold
                           SOLD
-                      -if item.status_id == 3
+                      -if item.trading_status_id == 3
                         .pickup-content__gray
                         .pickup-content__stop
                           公開停止
@@ -107,11 +107,11 @@
                       %span
                         = item.jpy
                       = image_tag product.images[0], size: '188x252'
-                      -if item.status_id == 4
+                      -if item.trading_status_id == 4
                         .pickup-content__red
                         .pickup-content__sold
                           SOLD
-                      -if item.status_id == 3
+                      -if item.trading_status_id == 3
                         .pickup-content__gray
                         .pickup-content__stop
                           公開停止
@@ -131,11 +131,11 @@
                       %span
                         = item.jpy
                       = image_tag item.images[0], resize: '188x188'
-                      -if item.status_id == 4
+                      -if item.trading_status_id == 4
                         .pickup-content__red
                         .pickup-content__sold
                           SOLD
-                      -if item.status_id == 3
+                      -if item.trading_status_id == 3
                         .pickup-content__gray
                         .pickup-content__stop
                           公開停止

@@ -2,9 +2,8 @@
   .top-header-top
     .top-header-top__header
       .top-header-top__header-contents
-        %h1 Foodie
         = link_to root_path do
-          = image_tag 'topcontents/logo.jpg', alt: 'logo', height: '80px', width: '80px', class: 'logo-image'
+          %h1 Foodie
         .top-header-top__header-search
           %form{ action: '/', method: 'post' }
             %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
