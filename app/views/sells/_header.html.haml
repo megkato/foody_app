@@ -4,8 +4,7 @@
       .top-header-top__header-contents
         %h1 Foodie
         = link_to root_path do
-          -# = image_tag 'mercari-logo-red.svg', alt: 'foody-logo',
-          -# class: 'toppage-header-top__header-contents--mercari-logo'
+          = image_tag 'topcontents/logo.jpg', alt: 'logo', height: '80px', width: '80px', class: 'logo-image'
         .top-header-top__header-search
           %form{ action: '/', method: 'post' }
             %input{ name: 'seach', class: 'toppage-header-top__header-search--search-form',
