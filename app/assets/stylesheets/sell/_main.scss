@@ -6,28 +6,31 @@
   
   .side-wrapper {
     width: 250px;
-    background-color:#F5F5F5;
+    background-color:#ffffff;
     margin-bottom: 20px;
     .sider-search__wrapper {
+      background-color:#F5F5F5;
       padding: 8px;
       height: 120px;
       border-radius: 5px;
-      font-size: 18px;
+      font-size: 14px;
+      margin-bottom: 15px;
       .side-search__categories-list {
         margin-bottom: 8px;
       }
     }
     .sider-search__products {
+      background-color:#F5F5F5;
       padding: 8px;
       border-radius: 5px;
       margin-bottom: 10px;
-      font-size: 18px;
+      font-size: 14px;
       overflow: scroll;
       .product__wrapper {
         padding-top: 15px;
         .product {
           margin-bottom: 10px;
-          font-size: 18px;
+          font-size: 14px;
         }
       }
     }

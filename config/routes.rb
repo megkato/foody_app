@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "sells#index"
   resources :users, only: [:edit, :update]
   resources :sells, only: [:index]
+  resources :mypage, only: [:index]
 end
