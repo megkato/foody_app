@@ -33,6 +33,14 @@
           font-size: 14px;
         }
       }
+      .sider-search__recruitment--container {
+        position: relative;
+        .btn-shine {
+          position: absolute;
+          top: 100;
+          left: 125;
+        }
+      }
     }
   }
 
