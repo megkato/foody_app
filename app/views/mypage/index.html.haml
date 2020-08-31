@@ -4,20 +4,22 @@
     %h2.mypageMain--title マイページ
     .mypageMain__listGroup
       %h3.mypageMain__listGroup--head
-        設定
-      %ul.mypageMain__listGroup--lists
-        %li.listGroup--list
-          = link_to logout_index_path, class: "listGroup--list--link" do
-            ログアウト
-            %i.listGroup--list--iconArrow
-      %ul.mypageMain__listGroup--lists
-        %li.listGroup--list
-          = link_to logout_index_path, class: "listGroup--list--link" do
-            お気に入り商品
-            %i.listGroup--list--iconArrow
-      %ul.mypageMain__listGroup--lists
-        %li.listGroup--list
-          -# = link_to card_path(current_user.id), class: "listGroup--list--link" do
-            お支払い方法
-            %i.listGroup--list--iconArrow
+        = current_user.nickname
+      .mypageMain__listGroup--top
+        %ul.mypageMain__listGroup--lists
+          %li.listGroup--list
+            = link_to logout_index_path, class: "listGroup--list--link" do
+              ログアウトする
+              %i.listGroup--list--iconArrow
+        %ul.mypageMain__listGroup--lists
+          %li.listGroup--list
+            = link_to logout_index_path, class: "listGroup--list--link" do
+              お気に入り商品
+              %i.listGroup--list--iconArrow
+        %ul.mypageMain__listGroup--lists
+          %li.listGroup--list
+            -# = link_to card_path(current_user.id), class: "listGroup--list--link" do
+              お支払い方法
+              %i.listGroup--list--iconArrow
+
   = render 'sells/footer'

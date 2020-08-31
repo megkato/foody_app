@@ -11,7 +11,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     @user = User.new(sign_up_params)
 
-    1ページ目で入力した情報のバリデーションチェック
+    # 1ページ目で入力した情報のバリデーションチェック
     unless @user.valid?
       render :new and return
     end
