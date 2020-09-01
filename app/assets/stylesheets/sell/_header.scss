@@ -14,17 +14,24 @@ h1 {
 .top-header-top__header-search {
   display: flex;
   input.toppage-header-top__header-search--search-form {
-    width: 500px;
+    width: 400px;
     height: 50%;
     font-size: 15px;
     border: 1px solid #000000;
     border-radius: 0;
     padding: 10px;
     line-height: 50%;
-    .top-header-top__header-search--search-btn {
-      right: 40px;
-      width: 40px;
-      border-radius: 0 2px 2px 0;
+  }
+  .top-header-top__header-search--search-btn {
+    right: 40px;
+    height: 40px;
+    border-radius: 0 2px 2px 0;
+    margin-top: 20px;
+    position: relative;
+    .fa-search:before {
+      position: absolute;
+      top: 13px;
+      left: 10px;
     }
   }
 }
