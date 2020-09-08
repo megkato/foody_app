@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   root "sells#index"
   resources :users, only: [:edit, :update]
   resources :logout, only: [:index]
-  resources :sells, only: [:index]
+  resources :sells, only: [:index, :new, :create]
   resources :mypage, only: [:index]
 end
