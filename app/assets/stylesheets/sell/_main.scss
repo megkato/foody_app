@@ -42,6 +42,17 @@
         }
       }
     }
+    .sider-search__recruitment--container {
+      position: relative;
+      a {
+        position: absolute;
+        top: 58px;
+        right: 70px;
+        color: white;
+        font-weight: bold;
+        font-size: 25px;
+      }
+    }
   }
 
   .main_left {
