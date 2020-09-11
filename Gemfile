@@ -70,3 +70,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'jp_prefecture'
   gem 'jquery-rails'
   gem 'ancestry'
+  gem "carrierwave"
